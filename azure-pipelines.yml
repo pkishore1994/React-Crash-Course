@@ -19,7 +19,8 @@ variables:
   imagePullSecret: 'aapmoracr2042e51f-auth'
 
   # Agent VM image name
-  vmImageName: 'aapmor_agentpool'
+pool:
+  name: 'aapmor_agentpool'
 
   # Name of the new namespace being created to deploy the PR changes.
   k8sNamespaceForPR: 'review-app-$(System.PullRequest.PullRequestId)'
