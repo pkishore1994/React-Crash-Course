@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pkishorereactcrashcourse 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pkishorereactcrashcourse
+  template:
+    metadata:
+      labels:
+        app: pkishorereactcrashcourse 
+    spec:
+      containers:
+        - name: pkishorereactcrashcourse 
+          image: aapmoracr.azurecr.io/pkishorereactcrashcourse
+          ports:
+          - containerPort: 80
